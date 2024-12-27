@@ -1,4 +1,4 @@
-export type IResponse<TData> = {
+export type IPaginatedResponse<TData> = {
   count: number
   previous: string | null
   next: string | null

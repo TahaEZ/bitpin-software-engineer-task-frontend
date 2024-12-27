@@ -16,7 +16,7 @@ const MarketDetails = () => {
         </Tabs.List>
         {MARKET_DETAILS_TABS.map((tab) => (
           <Tabs.Panel key={tab.value} value={tab.value}>
-            <tab.CategoryPanel />
+            {tab.element}
           </Tabs.Panel>
         ))}
       </Tabs>

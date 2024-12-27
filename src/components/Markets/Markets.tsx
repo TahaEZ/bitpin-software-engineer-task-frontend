@@ -2,7 +2,7 @@ import { Skeleton, Tabs } from '@mantine/core'
 
 import { MARKET_TABS } from '@/constants'
 import { filterMarketsByCurrency } from '@/helper'
-import useMarkets from '@/hooks/useMarkets'
+import { useMarkets } from '@/hooks'
 import { CurrencyBase } from '@/model/enum'
 
 import MarketCardList from './MarketCardList'

@@ -1,22 +1,22 @@
-import { MarketDetailsBuy, MarketDetailsMatches, MarketDetailsSell } from '@/components/MarketDetails'
-import { IMarketDetailsTab } from '@/model/dataModel/IMarketDetailsTab'
+import { MarketDetailsMatches, MarketOrders } from '@/components/MarketDetails'
+import { IMarketDetailsTab } from '@/model/dataModel'
 import { MarketDetailsCategory } from '@/model/enum'
 
 const MARKET_DETAILS_TABS: Array<IMarketDetailsTab> = [
   {
     title: 'سفارشات خرید',
     value: MarketDetailsCategory.BUY,
-    CategoryPanel: MarketDetailsBuy,
+    element: <MarketOrders type={MarketDetailsCategory.BUY} />,
   },
   {
     title: 'سفارشات فروش',
     value: MarketDetailsCategory.SELL,
-    CategoryPanel: MarketDetailsSell,
+    element: <MarketOrders type={MarketDetailsCategory.SELL} />,
   },
   {
     title: 'معاملات',
     value: MarketDetailsCategory.MATCHES,
-    CategoryPanel: MarketDetailsMatches,
+    element: <MarketDetailsMatches />,
   },
 ]
 

@@ -9,8 +9,7 @@ const handleQueryCacheError = (error: Error, cacheData: Query<unknown, unknown> 
     return
   }
 
-  const { response } = error
-  const message = !response?.data || !response?.data[0] ? SERVICE_GLOBAL_ERROR : response?.data[0]
+  const message = SERVICE_GLOBAL_ERROR
 
   notifications.show({ color: 'red', message })
 }

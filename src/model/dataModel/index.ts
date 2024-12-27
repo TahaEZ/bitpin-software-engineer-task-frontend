@@ -1,4 +1,6 @@
 export type { IMarketCardListProps } from './IMarketCardListProps'
 export type { IMarketCardProps } from './IMarketCardProps'
+export type { IMarketDetailsTab } from './IMarketDetailsTab'
+export type { IMarketOrderProps } from './IMarketOrderProps'
 export type { IMarketTab } from './IMarketTab'
 export type { IProps } from './IProps'
