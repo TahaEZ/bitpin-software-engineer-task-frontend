@@ -2,8 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root[data-mantine-color-scheme='light'] {
+    --background-1: #ffffff;
+    --background-2: #f7f7f7;
+    --background-3: #353535;
+
+    --primary-50: #d1ded1;
+    --primary-100: #c5d1c5;
+    --primary-200: #99c49d;
+    --primary-300: #72b87a;
+    --primary-400: #4fab5c;
+    --primary-500: #2f9e44;
+    --primary-600: #1e7831;
+    --primary-700: #105221;
+    --primary-800: #072b11;
+    --primary-900: #010502;
+  }
+
+  :root[data-mantine-color-scheme='dark'] {
+    --background-1: #1f1e2c;
+    --background-2: #2d2d45;
+    --background-3: #ffffff;
+
+    --primary-50: #131d16;
+    --primary-100: #172d1b;
+    --primary-200: #1c3d22;
+    --primary-300: #20522a;
+    --primary-400: #266e33;
+    --primary-500: #2b893d;
+    --primary-600: #499c55;
+    --primary-700: #6db075;
+    --primary-800: #95bf99;
+    --primary-900: #c1cdc1;
+  }
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: IRANSansXFaNum, serif;
   line-height: 1.5;
   font-weight: 400;
 

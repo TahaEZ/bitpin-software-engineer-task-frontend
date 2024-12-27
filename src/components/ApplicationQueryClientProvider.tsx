@@ -5,6 +5,7 @@ import { handleReactQueryCacheError } from '@/helper'
 import { IProps } from '@/model/dataModel'
 
 const queryClient = new QueryClient({
+  defaultOptions: { queries: { refetchOnWindowFocus: false } },
   queryCache: new QueryCache({
     onError: (error, query) => handleReactQueryCacheError(error, query),
   }),

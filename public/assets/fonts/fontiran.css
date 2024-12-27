@@ -1,0 +1,108 @@
+@font-face {
+  -moz-font-feature-settings: "ss03";
+  -webkit-font-feature-settings: "ss03";
+  font-feature-settings: "ss03";
+  font-family: IRANSansXFaNum;
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url('./iran/woff/IRANSansXFaNum-Thin.woff') format('woff'),
+  url('./iran/woff2/IRANSansXFaNum-Thin.woff2') format('woff2');
+}
+
+@font-face {
+  -moz-font-feature-settings: "ss03";
+  -webkit-font-feature-settings: "ss03";
+  font-feature-settings: "ss03";
+  font-family: IRANSansXFaNum;
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+
+  src: url('./iran/woff/IRANSansXFaNum-UltraLight.woff') format('woff'),
+  url('./iran/woff2/IRANSansXFaNum-UltraLight.woff2') format('woff2');
+}
+
+@font-face {
+  -moz-font-feature-settings: "ss03";
+  -webkit-font-feature-settings: "ss03";
+  font-feature-settings: "ss03";
+  font-family: IRANSansXFaNum;
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('./iran/woff/IRANSansXFaNum-Light.woff') format('woff'),
+  url('./iran/woff2/IRANSansXFaNum-Light.woff2') format('woff2');
+}
+
+@font-face {
+  -moz-font-feature-settings: "ss03";
+  -webkit-font-feature-settings: "ss03";
+  font-feature-settings: "ss03";
+  font-family: IRANSansXFaNum;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./iran/woff/IRANSansXFaNum-Medium.woff') format('woff'),
+  url('./iran/woff2/IRANSansXFaNum-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  -moz-font-feature-settings: "ss03";
+  -webkit-font-feature-settings: "ss03";
+  font-feature-settings: "ss03";
+  font-family: IRANSansXFaNum;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./iran/woff/IRANSansXFaNum-DemiBold.woff') format('woff'),
+  url('./iran/woff2/IRANSansXFaNum-DemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  -moz-font-feature-settings: "ss03";
+  -webkit-font-feature-settings: "ss03";
+  font-feature-settings: "ss03";
+  font-family: IRANSansXFaNum;
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('./iran/woff/IRANSansXFaNum-ExtraBold.woff') format('woff'),
+  url('./iran/woff2/IRANSansXFaNum-ExtraBold.woff2') format('woff2');
+}
+
+@font-face {
+  -moz-font-feature-settings: "ss03";
+  -webkit-font-feature-settings: "ss03";
+  font-feature-settings: "ss03";
+  font-family: IRANSansXFaNum;
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('./iran/woff/IRANSansXFaNum-Black.woff') format('woff'),
+  url('./iran/woff2/IRANSansXFaNum-Black.woff2') format('woff2');
+}
+
+@font-face {
+  -moz-font-feature-settings: "ss03";
+  -webkit-font-feature-settings: "ss03";
+  font-feature-settings: "ss03";
+  font-family: IRANSansXFaNum;
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url('./iran/woff/IRANSansXFaNum-Bold.woff') format('woff'),
+  url('./iran/woff2/IRANSansXFaNum-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  -moz-font-feature-settings: "ss03";
+  -webkit-font-feature-settings: "ss03";
+  font-feature-settings: "ss03";
+  font-family: IRANSansXFaNum;
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url('./iran/woff/IRANSansXFaNum-Regular.woff') format('woff'),
+  url('./iran/woff2/IRANSansXFaNum-Regular.woff2') format('woff2');
+}
