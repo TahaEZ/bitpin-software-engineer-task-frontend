@@ -11,19 +11,23 @@ import Markets from '@/components/Markets/Markets'
 import { THEME } from '@/constants'
 import LINKS from '@/constants/LINKS'
 
+import ApplicationLayout from './components/ApplicationLayout'
+
 function App() {
   return (
     <DirectionProvider initialDirection="rtl">
       <MantineProvider defaultColorScheme="auto" theme={THEME}>
         <ApplicationQueryClientProvider>
-          <Notifications />
-          <Routes>
-            <Route path={LINKS.MARKETS} element={<Markets />} />
-            <Route path={LINKS.MARKET_DETAILS} element={<MarketDetails />} />
-          </Routes>
-          <div dir="ltr">
-            <ReactQueryDevtools initialIsOpen={false} />
-          </div>
+          <ApplicationLayout>
+            <Notifications />
+            <Routes>
+              <Route path={LINKS.MARKETS} element={<Markets />} />
+              <Route path={LINKS.MARKET_DETAILS} element={<MarketDetails />} />
+            </Routes>
+            <div dir="ltr">
+              <ReactQueryDevtools initialIsOpen={false} />
+            </div>
+          </ApplicationLayout>
         </ApplicationQueryClientProvider>
       </MantineProvider>
     </DirectionProvider>

@@ -1,3 +1,4 @@
+export type { IIconProps, IIconSize } from './IIconProps'
 export type { IMarketCardListProps } from './IMarketCardListProps'
 export type { IMarketCardProps } from './IMarketCardProps'
 export type { IMarketDetailsTab } from './IMarketDetailsTab'

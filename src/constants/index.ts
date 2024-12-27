@@ -1,3 +1,4 @@
+export { default as ICON_SIZES } from './ICON_SIZES'
 export { default as LINKS } from './LINKS'
 export { default as MARKET_DETAILS_TABS } from './MARKET_DETAILS_TABS'
 export { default as MARKET_TABS } from './MARKET_TABS'
