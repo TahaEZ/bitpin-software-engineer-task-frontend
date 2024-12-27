@@ -1,0 +1,3 @@
+const PAGINATION_PAGE_SIZE = 10
+
+export default PAGINATION_PAGE_SIZE
