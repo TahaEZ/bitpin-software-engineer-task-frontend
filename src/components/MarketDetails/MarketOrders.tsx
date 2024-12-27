@@ -23,17 +23,17 @@ const MarketOrders: FC<IMarketOrderProps> = ({ type }) => {
       </div>
       <div className="flex flex-col gap-2">
         {isLoading &&
-          Array.from({ length: 3 }).map((_, index) => (
-            <div key={index} className="grid grid-cols-3 place-items-center gap-2">
-              <Skeleton my={2} height={10} />
-              <Skeleton my={2} height={10} />
-              <Skeleton my={2} height={10} />
+          Array.from({ length: 3 }).map(() => (
+            <div key={crypto.randomUUID()} className="grid grid-cols-3 place-items-center gap-2">
+              {Array.from({ length: 3 }).map(() => (
+                <Skeleton key={crypto.randomUUID()} my={2} height={10} />
+              ))}
             </div>
           ))}
         {!isLoading && (
           <div>
-            {data?.orders?.slice(0, 10).map((order, index) => (
-              <div key={index} className="grid grid-cols-3 place-items-center gap-2">
+            {data?.orders?.slice(0, 10).map((order) => (
+              <div key={crypto.randomUUID()} className="grid grid-cols-3 place-items-center gap-2">
                 <div>{new Decimal(order.remain).toFixed()}</div>
                 <div>{new Decimal(order.price).toFixed()}</div>
                 <div>{new Decimal(order.value).toFixed()}</div>
