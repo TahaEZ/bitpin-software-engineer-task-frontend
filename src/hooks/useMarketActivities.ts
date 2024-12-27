@@ -13,6 +13,7 @@ const useMarketActivities = (id: string | undefined, type: MarketDetailsCategory
       return (await getMarketActivities(+id, type)).data
     },
     queryKey: [MARKET_ACTIVITIES_QUERY_KEY, id ?? '', type],
+    refetchInterval: 3000,
   })
 }
 

@@ -10,6 +10,7 @@ const useMarketMatches = (id: string | undefined) => {
       return (await getMarketMatches(+id)).data
     },
     queryKey: ['Market Matches', id ?? ''],
+    refetchInterval: 3000,
   })
 }
 
