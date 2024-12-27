@@ -6,7 +6,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { Route, Routes } from 'react-router'
 
 import ApplicationQueryClientProvider from '@/components/ApplicationQueryClientProvider'
-import MarketDetails from '@/components/MarketDetails'
+import { MarketDetails } from '@/components/MarketDetails'
 import Markets from '@/components/Markets/Markets'
 import { THEME } from '@/constants'
 import LINKS from '@/constants/LINKS'

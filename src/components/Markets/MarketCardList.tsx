@@ -16,8 +16,8 @@ const MarketCardList: FC<IMarketCardListProps> = ({ markets }) => {
     <div>
       <div className="flex flex-col gap-4 p-4">
         {markets.slice((currentPage - 1) * PAGINATION_PAGE_SIZE, currentPage * PAGINATION_PAGE_SIZE).map((market) => (
-          <Link to={LINKS.MARKET_DETAILS.replace(':id', `${market.id}`)}>
-            <MarketCard key={market.id} market={market} />
+          <Link key={market.id} to={LINKS.MARKET_DETAILS.replace(':id', `${market.id}`)}>
+            <MarketCard market={market} />
           </Link>
         ))}
       </div>

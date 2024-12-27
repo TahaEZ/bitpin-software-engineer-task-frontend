@@ -1,4 +1,5 @@
 export { default as LINKS } from './LINKS'
+export { default as MARKET_DETAILS_TABS } from './MARKET_DETAILS_TABS'
 export { default as MARKET_TABS } from './MARKET_TABS'
 export { default as PAGINATION_PAGE_SIZE } from './PAGINATION_PAGE_SIZE'
 export { default as SERVICE_GLOBAL_ERROR } from './SERVICE_GLOBAL_ERROR'
