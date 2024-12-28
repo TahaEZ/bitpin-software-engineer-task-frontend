@@ -1,6 +1,5 @@
 import { CurrencyBase } from '@/model/enum'
 
-export type IMarketTab = {
-  value: CurrencyBase
-  title: string
-}
+import { ITab } from './ITab'
+
+export type IMarketTab = ITab<CurrencyBase>

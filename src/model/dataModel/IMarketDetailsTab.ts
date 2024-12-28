@@ -2,8 +2,8 @@ import { ReactNode } from 'react'
 
 import { MarketDetailsCategory } from '@/model/enum'
 
-export type IMarketDetailsTab = {
-  title: string
-  value: MarketDetailsCategory
+import { ITab } from './ITab'
+
+export type IMarketDetailsTab = ITab<MarketDetailsCategory> & {
   element: ReactNode
 }
