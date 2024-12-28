@@ -1,4 +1,5 @@
 import { Tabs } from '@mantine/core'
+import { Helmet } from 'react-helmet'
 
 import { MARKET_DETAILS_TABS } from '@/constants'
 import { MarketDetailsCategory } from '@/model/enum'
@@ -6,6 +7,9 @@ import { MarketDetailsCategory } from '@/model/enum'
 const MarketDetails = () => {
   return (
     <div className="p-4">
+      <Helmet>
+        <title>بیت‌پین | جزئیات بازار</title>
+      </Helmet>
       <Tabs keepMounted={false} defaultValue={MarketDetailsCategory.BUY}>
         <Tabs.List>
           {MARKET_DETAILS_TABS.map((tab) => (

@@ -1,4 +1,5 @@
 import { Skeleton, Tabs } from '@mantine/core'
+import { Helmet } from 'react-helmet'
 
 import { MARKET_TABS } from '@/constants'
 import { filterMarketsByCurrency } from '@/helper'
@@ -12,6 +13,9 @@ const Markets = () => {
 
   return (
     <div className="p-4">
+      <Helmet>
+        <title>بیت‌پین | بازارها</title>
+      </Helmet>
       <Tabs defaultValue={CurrencyBase.IRT}>
         <Tabs.List>
           {MARKET_TABS.map((tab) => (
