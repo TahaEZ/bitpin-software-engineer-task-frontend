@@ -2,7 +2,7 @@ import { Skeleton } from '@mantine/core'
 import Decimal from 'decimal.js'
 import { useParams } from 'react-router'
 
-import useMarketMatches from '@/hooks/useMarketMatches'
+import { useMarketMatches } from '@/hooks'
 
 const MarketDetailsMatches = () => {
   const { id } = useParams()
@@ -17,10 +17,10 @@ const MarketDetailsMatches = () => {
       </div>
       <div className="flex flex-col gap-2">
         {isLoading &&
-          Array.from({ length: 3 }).map(() => (
-            <div key={crypto.randomUUID()} className="grid grid-cols-3 place-items-center gap-2">
-              {Array.from({ length: 3 }).map(() => (
-                <Skeleton key={crypto.randomUUID()} my={2} height={10} />
+          Array.from({ length: 3 }).map((_, i) => (
+            <div key={i} className="grid grid-cols-3 place-items-center gap-2">
+              {Array.from({ length: 3 }).map((_, j) => (
+                <Skeleton key={j} my={2} height={10} />
               ))}
             </div>
           ))}
