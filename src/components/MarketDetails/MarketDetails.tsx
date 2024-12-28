@@ -1,6 +1,6 @@
 import { Tabs } from '@mantine/core'
 import { useState } from 'react'
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 
 import SwipeableTabsPanel from '@/components/SwipeableTabsPanel'
 import { MARKET_DETAILS_TABS } from '@/constants'
