@@ -3,16 +3,19 @@ import Decimal from 'decimal.js'
 import { FC } from 'react'
 import { useParams } from 'react-router'
 
+import { getOrdersRemainSum, getOrdersValueSum } from '@/helper'
 import { useMarketActivities } from '@/hooks'
 import { IMarketOrderProps } from '@/model/dataModel'
+
+import MarketPercentageOrder from './MarketPercentageOrder'
 
 const MarketOrders: FC<IMarketOrderProps> = ({ type }) => {
   const { id } = useParams()
 
   const { isLoading, data } = useMarketActivities(id, type)
 
-  const ordersRemainSum = data?.orders?.reduce((previousValue, order) => new Decimal(order.remain).add(previousValue).toNumber(), 0)
-  const ordersValueSum = data?.orders?.reduce((previousValue, order) => new Decimal(order.value).add(previousValue).toNumber(), 0)
+  const ordersRemainSum = getOrdersRemainSum(data?.orders)
+  const ordersValueSum = getOrdersValueSum(data?.orders)
 
   return (
     <div className="p-2 md:p-4">
@@ -52,6 +55,9 @@ const MarketOrders: FC<IMarketOrderProps> = ({ type }) => {
                 <span>مجموع باقی‌مانده: </span>
                 <span>{ordersRemainSum}</span>
               </div>
+            </div>
+            <div className="mt-12">
+              <MarketPercentageOrder orders={data?.orders} ordersRemainSum={ordersRemainSum} />
             </div>
           </div>
         )}
