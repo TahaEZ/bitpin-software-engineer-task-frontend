@@ -2,9 +2,10 @@ import { NumberInput } from '@mantine/core'
 import Decimal from 'decimal.js'
 import { FC, useState } from 'react'
 
+import { getPercentageBasedOrdersInfo } from '@/helper'
 import { IMarketPercentageOrderProps } from '@/model/dataModel'
 
-const MarketPercentageOrder: FC<IMarketPercentageOrderProps> = ({ ordersRemainSum }) => {
+const MarketPercentageOrder: FC<IMarketPercentageOrderProps> = ({ ordersRemainSum, orders }) => {
   const [percentage, setPercentage] = useState<number | string>('')
   const [error, setError] = useState<string | null>(null)
 
@@ -18,10 +19,12 @@ const MarketPercentageOrder: FC<IMarketPercentageOrderProps> = ({ ordersRemainSu
   }
 
   const orderedRemain = ordersRemainSum ? new Decimal(ordersRemainSum).mul(+percentage).dividedBy(100).toFixed() : undefined
+  const { totalValue, weightedAveragePrice } = getPercentageBasedOrdersInfo(orders, orderedRemain)
 
   return (
     <div>
       <NumberInput
+        className="mx-auto sm:max-w-80"
         onChange={(value) => handleChange(value)}
         value={percentage}
         error={error}
@@ -35,6 +38,14 @@ const MarketPercentageOrder: FC<IMarketPercentageOrderProps> = ({ ordersRemainSu
         <div>
           <span>مجموع حجم ارز قابل دریافت: </span>
           <span>{orderedRemain}</span>
+        </div>
+        <div>
+          <span>میانگین قیمت ارز: </span>
+          <span>{weightedAveragePrice}</span>
+        </div>
+        <div>
+          <span>مجموع مبلغ قابل پرداخت: </span>
+          <span>{totalValue}</span>
         </div>
       </div>
     </div>

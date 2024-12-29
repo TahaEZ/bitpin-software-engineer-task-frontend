@@ -1,5 +1,7 @@
 export { default as filterMarketsByCurrency } from './filterMarketsByCurrency'
 export { default as getOrdersRemainSum } from './getOrdersRemainSum'
 export { default as getOrdersValueSum } from './getOrdersValueSum'
+export { default as getPercentageBasedOrdersInfo } from './getPercentageBasedOrdersInfo'
+export { default as getWeightedAveragePrice } from './getWeightedAveragePrice'
 export { default as handleReactQueryCacheError } from './handleReactQueryCacheError'
 export { default as handleSwipeTabs } from './handleSwipeTabs'

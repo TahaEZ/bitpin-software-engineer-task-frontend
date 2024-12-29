@@ -3,7 +3,7 @@ import Decimal from 'decimal.js'
 import { FC } from 'react'
 import { useParams } from 'react-router'
 
-import { getOrdersRemainSum, getOrdersValueSum } from '@/helper'
+import { getOrdersRemainSum, getOrdersValueSum, getWeightedAveragePrice } from '@/helper'
 import { useMarketActivities } from '@/hooks'
 import { IMarketOrderProps } from '@/model/dataModel'
 
@@ -16,6 +16,7 @@ const MarketOrders: FC<IMarketOrderProps> = ({ type }) => {
 
   const ordersRemainSum = getOrdersRemainSum(data?.orders)
   const ordersValueSum = getOrdersValueSum(data?.orders)
+  const weightedAveragePrice = getWeightedAveragePrice(data?.orders, ordersRemainSum)
 
   return (
     <div className="p-2 md:p-4">
@@ -52,8 +53,8 @@ const MarketOrders: FC<IMarketOrderProps> = ({ type }) => {
                 <span>{ordersValueSum}</span>
               </div>
               <div>
-                <span>مجموع باقی‌مانده: </span>
-                <span>{ordersRemainSum}</span>
+                <span>میانگین قیمت وزن‌دار: </span>
+                <span>{weightedAveragePrice}</span>
               </div>
             </div>
             <div className="mt-12">
